@@ -26,6 +26,19 @@ puts e.slice(6..-1) #World
 
 "a"<<"b"
 
+f = "a b c"
+f.split == ["a", "b", "c"]
+f.scan(/\w/) == ["a", "b", "c"]
+
+g = "a, b, c"
+g.scan(/\w/) == ["a", "b", "c"]
+g.split(/\,\s/) == ["a", "b", "c"]
+
+h = "the:rain:in:spain"
+h.split(/\:/)
+h.scan(/w+/)
+
+
 arr_anagram = ['eagle', 'gleea', 'Egael', 'cysyx', 'eagleeagle']
 
 def anagram (str, array)
@@ -35,7 +48,7 @@ def anagram (str, array)
   def sort_string (str)
     str.downcase.chars.sort!.join
   end
-  
+  []
   str = sort_string(str)
   array_sorted = array.map { |el| sort_string(el) }
   array_to_return = Array.new
