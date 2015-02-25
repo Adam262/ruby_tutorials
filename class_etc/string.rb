@@ -1,9 +1,12 @@
+"Hello world".respond_to?(:each_char) #=> true
+"Hello world".gsub(/\s/,'').downcase.chars.sort.join #=> "dehllloorw"
+
 a = "Hello my name is adam"
 #print a.split
 
 b = %q(every-rose-has-its-
       and-every-night-
-      has its dawn)
+      has-its-dawn)
 print b.split('-').reverse.join('/')
 
 c = "My address is 838 Standish Ave"
@@ -31,8 +34,8 @@ f.split == ["a", "b", "c"]
 f.scan(/\w/) == ["a", "b", "c"]
 
 g = "a, b, c"
-g.scan(/\w/) == ["a", "b", "c"]
 g.split(/\,\s/) == ["a", "b", "c"]
+g.scan(/\w/) == ["a", "b", "c"]
 
 h = "the:rain:in:spain"
 h.split(/\:/)
