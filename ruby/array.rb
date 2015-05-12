@@ -9,7 +9,7 @@
 a = %w(1 2 3 4 5)
 b = a.map { |el| el.to_i**2 }
 
-b.each_index{ |el| puts el }
+b.each_index { |el| puts el }
 b.select { |el| el > 9} #find_all
 b.find { |el| el == 9 }
 

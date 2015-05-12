@@ -32,3 +32,12 @@ puts artistsHash.fetch "Mozart" # KeyError
 oldHash.keys [:x, :y]
 oldHash.values
 oldHash.each { |k,v| puts "#{k}:#{v}"}
+
+# converting back and forth between json and hash
+oldHash.is_a? Hash #=> true
+
+oldHash = oldHash.to_json
+oldHash.is_a? String #=> true
+
+oldHash = JSON.parse(oldHash)
+oldHash.is_a? Hash #=> true
