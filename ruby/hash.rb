@@ -41,3 +41,12 @@ oldHash.is_a? String #=> true
 
 oldHash = JSON.parse(oldHash)
 oldHash.is_a? Hash #=> true
+
+# converting back and forth between yaml and hash
+oldHash = oldHash.to_yaml
+
+oldHash.is_a? String #=> true
+
+oldHash = YAML.load(oldHash)
+
+oldHash.is_a? Hash #=> true
